@@ -1,0 +1,90 @@
+<div class="container">
+   <div class="row">
+      <div class="col-md-4 col-md-offset-4">
+         <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" name="term" [(ngModel)]="term" placeholder="Search" aria-label="Search">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit" (click)="onSearchClicked()">Search</button>
+          </form>
+      </div>
+   </div>
+      <div class="row">
+         <div class="col-md-4">
+            <div class="border m-2 p-2">
+               <label>Refine</label>
+               <br />
+               <input type="text" name="art-name" class="form-control" [(ngModel)]="artName" placeholder="Art name..." />
+               <br />
+               <button class="btn btn-block btn-default" (click)="onFilterClicked()">Filter</button>
+            </div>
+         </div>
+         <div class="loading-container col-md-8">
+            <div class="border m-2 p-2">
+               <div class="loading-container-shade" *ngIf="isLoading">
+                  <mat-spinner *ngIf="isLoading"></mat-spinner>
+               </div>
+         
+               <ng-container *ngIf="arts && arts.length > 0; else noArts;">
+                  <div class="row">
+                     <div class="col-md-4" *ngFor="let art of arts; let i = index">
+                        <mat-card class="example-card">
+                           <mat-card-header>
+                             <div mat-card-avatar class="example-header-image"></div>
+                             <mat-card-title>{{ art.name}}</mat-card-title>
+                           </mat-card-header>
+                           <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                           <mat-card-content>
+                             <p>
+                               {{ art.description }}
+                             </p>
+                           </mat-card-content>
+                           <mat-card-actions>
+                             <button mat-button><i class="fa fa-list"></i>Details</button>
+                             <button mat-button><i class="fa fa-basket"></i> Add to card</button>
+                           </mat-card-actions>
+                         </mat-card>
+                     </div>
+                  </div>
+               </ng-container>
+               <ng-template #noArts>
+                  No art has been found for the term {{term}}.
+               </ng-template>
+            </div>
+         </div>
+      </div>
+   
+
+         <!-- <div class="button-container">
+            <div class="button card-small" routerLink="create" tabindex="0">
+               <svg class="material-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+                  <path d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z" />
+               </svg>
+
+               <span>New Art</span>
+            </div>
+         </div>
+
+         <div class="row">
+            <div class="col-md-4">
+               <mat-card class="example-card">
+                  <mat-card-header>
+                    <div mat-card-avatar class="example-header-image"></div>
+                    <mat-card-title>Shiba Inu</mat-card-title>
+                    <mat-card-subtitle>Dog Breed</mat-card-subtitle>
+                  </mat-card-header>
+                  <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+                  <mat-card-content>
+                    <p>
+                      The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+                      A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+                      bred for hunting.
+                    </p>
+                  </mat-card-content>
+                  <mat-card-actions>
+                    <button mat-button>LIKE</button>
+                    <button mat-button>SHARE</button>
+                  </mat-card-actions>
+                </mat-card>
+            </div>
+         </div>
+   </div> -->
+</div>

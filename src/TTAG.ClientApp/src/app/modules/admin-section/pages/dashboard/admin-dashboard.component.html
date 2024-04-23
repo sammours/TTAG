@@ -1,0 +1,23 @@
+<div class="container-fluid">
+   <div class="row">
+       <div class="col-md-2">
+         <nav class="navbar navbar-light navbar-expand-sm px-0 flex-row flex-nowrap">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarWEX" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+             <div class="navbar-collapse collapse" id="navbarWEX">
+                <div class="nav flex-sm-column flex-row">
+                    <a class="nav-item nav-link" (click)="onSectionChanged('Arts')">Arts</a>
+                    <a class="nav-item nav-link" (click)="onSectionChanged('Artists')">Artists</a>
+                </div>
+            </div>
+        </nav>
+       </div>
+       <div class="col-md-10">
+         <div *ngIf="activeSection === 'Dashboard'">
+             Welcome to admin dashboard
+         </div>
+         <app-create-art *ngIf="activeSection === 'Arts'"></app-create-art>
+       </div>
+   </div>
+</div>

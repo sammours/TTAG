@@ -1,0 +1,97 @@
+<div class="container">
+  <mat-card class="container">
+    <form [formGroup]="formArt" (ngSubmit)="onSubmit()">
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Name</mat-label>
+          <input matInput required formControlName="name">
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Street1</mat-label>
+          <input matInput formControlName="street1">
+        </mat-form-field>
+      </div>
+  
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Street2</mat-label>
+          <input matInput formControlName="street2">
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Postal code</mat-label>
+          <input matInput formControlName="postalCode">
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>City</mat-label>
+          <input matInput formControlName="city">
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Country</mat-label>
+          <input matInput formControlName="country">
+        </mat-form-field>
+      </div>
+  
+  
+      <div class="col">
+        <mat-form-field>
+          <mat-label>Release year</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="releaseYear">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Art category</mat-label>
+          <mat-select formControlName="artCategory">
+            <mat-option *ngFor="let type of artCategory" [value]="type">{{type}}</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Price</mat-label>
+          <input matInput type="number" class="example-right-align" formControlName="price">
+          <span matPrefix>$&nbsp;</span>
+          <span matSuffix>.00</span>
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Reference url</mat-label>
+          <input type="url" matInput formControlName="referenceUrl">
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <mat-form-field appearance="fill">
+          <mat-label>Description</mat-label>
+          <textarea matInput formControlName="description"></textarea>
+        </mat-form-field>
+      </div>
+  
+      <div class="col">
+        <button class="mat-button" routerLink="/art" mat-raised-button>Back</button>
+        <button type="submit" class="mat-button btn-primary" mat-raised-button>Create</button>
+      </div>
+  
+    </form>
+  </mat-card>
+</div>

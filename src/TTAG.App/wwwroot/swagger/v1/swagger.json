@@ -1,0 +1,603 @@
+﻿{
+  "x-generator": "NSwag v13.3.0.0 (NJsonSchema v10.1.11.0 (Newtonsoft.Json v12.0.0.0))",
+  "swagger": "2.0",
+  "info": {
+    "title": "My Title",
+    "version": "1.0.0"
+  },
+  "paths": {
+    "/Art": {
+      "get": {
+        "tags": [
+          "Art"
+        ],
+        "operationId": "Art_GetAll",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Art"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Art"
+        ],
+        "operationId": "Art_Add",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "art",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Art"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Art"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Art"
+        ],
+        "operationId": "Art_Update",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "art",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Art"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Art"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Art"
+        ],
+        "operationId": "Art_Delete",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/Art/{id}": {
+      "get": {
+        "tags": [
+          "Art"
+        ],
+        "operationId": "Art_Get",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Art"
+            }
+          }
+        }
+      }
+    },
+    "/Artist": {
+      "get": {
+        "tags": [
+          "Artist"
+        ],
+        "operationId": "Artist_GetAll",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "array",
+              "items": {
+                "$ref": "#/definitions/Artist"
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "tags": [
+          "Artist"
+        ],
+        "operationId": "Artist_Add",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "art",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Artist"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Artist"
+            }
+          }
+        }
+      },
+      "put": {
+        "tags": [
+          "Artist"
+        ],
+        "operationId": "Artist_Update",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "art",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/Artist"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Artist"
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Artist"
+        ],
+        "operationId": "Artist_Delete",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "type": "boolean"
+            }
+          }
+        }
+      }
+    },
+    "/Artist/{id}": {
+      "get": {
+        "tags": [
+          "Artist"
+        ],
+        "operationId": "Artist_Get",
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/Artist"
+            }
+          }
+        }
+      }
+    },
+    "/Users/Add": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_Add",
+        "consumes": [
+          "application/json",
+          "text/json",
+          "application/*+json"
+        ],
+        "produces": [
+          "text/plain",
+          "application/json",
+          "text/json"
+        ],
+        "parameters": [
+          {
+            "name": "user",
+            "in": "body",
+            "required": true,
+            "schema": {
+              "$ref": "#/definitions/User"
+            },
+            "x-nullable": false
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": false,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/User"
+            }
+          }
+        }
+      }
+    },
+    "/Users/Login": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_Login",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "username",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "password",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/Users": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_GetUser",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "id",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    },
+    "/Users/TestYourToken": {
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "operationId": "Users_TestYourToken",
+        "parameters": [
+          {
+            "type": "string",
+            "name": "username",
+            "in": "query",
+            "x-nullable": true
+          },
+          {
+            "type": "string",
+            "name": "password",
+            "in": "query",
+            "x-nullable": true
+          }
+        ],
+        "responses": {
+          "200": {
+            "x-nullable": true,
+            "description": "",
+            "schema": {
+              "type": "file"
+            }
+          }
+        }
+      }
+    }
+  },
+  "definitions": {
+    "Art": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Entity"
+        },
+        {
+          "type": "object",
+          "required": [
+            "releaseYear",
+            "originalPrice",
+            "price",
+            "category"
+          ],
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "description": {
+              "type": "string"
+            },
+            "dimensions": {
+              "type": "string"
+            },
+            "releaseYear": {
+              "type": "integer",
+              "format": "int32"
+            },
+            "originalPrice": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "price": {
+              "type": "number",
+              "format": "decimal"
+            },
+            "referenceUrl": {
+              "type": "string"
+            },
+            "artistId": {
+              "type": "string"
+            },
+            "category": {
+              "$ref": "#/definitions/ArtCategory"
+            },
+            "address": {
+              "$ref": "#/definitions/Address"
+            }
+          }
+        }
+      ]
+    },
+    "ArtCategory": {
+      "type": "integer",
+      "description": "",
+      "x-enumNames": [
+        "Painting",
+        "Sculpture",
+        "Photography"
+      ],
+      "enum": [
+        0,
+        1,
+        2
+      ]
+    },
+    "Address": {
+      "type": "object",
+      "properties": {
+        "street1": {
+          "type": "string"
+        },
+        "street2": {
+          "type": "string"
+        },
+        "postalCode": {
+          "type": "string"
+        },
+        "city": {
+          "type": "string"
+        },
+        "country": {
+          "type": "string"
+        }
+      }
+    },
+    "Entity": {
+      "type": "object",
+      "required": [
+        "createdDate",
+        "lastUpdatedDate"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "createdDate": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "lastUpdatedDate": {
+          "type": "string",
+          "format": "date-time"
+        }
+      }
+    },
+    "Artist": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Entity"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string"
+            },
+            "country": {
+              "type": "string"
+            }
+          }
+        }
+      ]
+    },
+    "User": {
+      "allOf": [
+        {
+          "$ref": "#/definitions/Entity"
+        },
+        {
+          "type": "object",
+          "properties": {
+            "firstName": {
+              "type": "string"
+            },
+            "lastName": {
+              "type": "string"
+            },
+            "userName": {
+              "type": "string"
+            },
+            "email": {
+              "type": "string"
+            },
+            "password": {
+              "type": "string"
+            },
+            "salt": {
+              "type": "string",
+              "format": "byte"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

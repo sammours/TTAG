@@ -1,0 +1,16 @@
+.mat-card {
+    margin: 0px auto;
+    width: 80%;
+    position: relative;
+    top: 10px;
+}
+
+.form-control-borderless {
+    border: none;
+}
+
+.form-control-borderless:hover, .form-control-borderless:active, .form-control-borderless:focus {
+    border: none;
+    outline: none;
+    box-shadow: none;
+}
